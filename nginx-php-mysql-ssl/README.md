@@ -30,3 +30,16 @@ File 2: `phpmyadmin.conf`
 `cd /etc/nginx/sites-available`;
 `sudo ln -s jshossen.conf /etc/nginx/sites-enabled`
 
+
+### install certbot
+`sudo apt-get install python3-certbot-nginx`
+
+
+### Install wildcard(*) ssl for jshossen.com and *.jshossen.com
+`sudo certbot certonly --manual -d *.jshossen.com -d jshossen.com --agree-tos --no-bootstrap --manual-public-ip-logging-ok --preferred-challenges dns-01 --server https://acme-v02.api.letsencrypt.org/directory`
+
+
+### Link cert and key file inside jshossen.conf
+`ssl_certificate         /etc/letsencrypt/live/jshossen.com/fullchain.pem;`
+`ssl_certificate_key     /etc/letsencrypt/live/jshossen.com/privkey.pem;`
+
