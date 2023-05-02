@@ -9,7 +9,7 @@
 
 # Terminal
 +++++++++++++
-check installed php versions:
+## check installed php versions:
 `sudo update-alternatives --config php`
 
 
