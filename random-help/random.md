@@ -11,6 +11,4 @@
 +++++++++++++
 ## check installed php versions:
 `sudo update-alternatives --config php`
-
-
-
+`php --ini`
